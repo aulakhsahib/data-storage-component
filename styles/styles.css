@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
 
-* {
-    /* outline: 1px solid red; */
-}
-
 :root {
     font-family: 'Raleway', sans-serif;
     --pale-blue: hsl(243, 100%, 93%);
@@ -47,6 +43,7 @@ body {
 .main-container {
     margin: auto;
     height: 100vh;
+    width: 85%;
     max-width: 800px;
     display: grid;
     grid-template-columns: auto 1fr;
@@ -57,13 +54,13 @@ body {
 
 }
 
-.main-container>*{
+.main-container>* {
     background-color: var(--dark-blue);
 }
 
 section.logo-section {
-    padding: 1.5rem 7rem 1.5rem 1.5rem;
-    border-radius: 0.5rem 5rem 0.5rem 0.5rem;
+    padding: 2.5rem 7rem 1.5rem 1.5rem;
+    border-radius: 0.5rem 5.5rem 0.5rem 0.5rem;
 }
 
 .button-container {
@@ -72,7 +69,7 @@ section.logo-section {
     justify-content: space-between;
 }
 
-.button-container>button{
+.button-container>button {
     height: 35px;
     padding: 5px 7.5px;
     border: none;
@@ -81,23 +78,89 @@ section.logo-section {
 }
 
 section.status-section {
-    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 2rem 1.5rem;
+    border-radius: 6px;
 }
 
+.data-remaining {
+    position: absolute;
+    background-color: white;
+    color: var(--very-dark-blue);
+    text-transform: uppercase;
+    padding: 1rem;
+    top: -40px;
+    border-radius: 6px;
+    align-self: flex-end;
+}
 
+strong {
+    font-size: 1.5rem;
+}
 
+.slider {
+    position: relative;
+    padding: 4px;
+    height: 16px;
+    background-color: var(--very-dark-blue);
+    border-radius: 1rem;
+}
 
+.progress {
+    position: absolute;
+    left: 4px;
+    height: calc(100% - 8px);
+    width: 80%;
+    border-radius: 1rem;
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
 
+.pointer {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 16px;
+    border-radius: 50%;
+    background-color: white;
+}
 
-
-
-
+.slider-caption {
+    display: flex;
+    justify-content: space-between;
+}
 
 .attribution {
     font-size: 11px;
     text-align: center;
+    color: white;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: tomato;
+}
+
+@media only screen and (max-width: 850px) {
+
+    body {
+        background-image: url("../img/bg-mobile.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .main-container {
+        grid-template-columns: none;
+    }
+
+    .button-container {
+        justify-content: flex-start;
+        gap: 0.5rem;
+    }
+
+    .data-remaining {
+        top: 115px;
+        align-self: center;
+    }
 }
