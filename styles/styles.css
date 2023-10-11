@@ -1,3 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+
+* {
+    outline: 1px solid red;
+}
+
+:root {
+    font-family: 'Raleway', sans-serif;
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*after {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body,
+p {
+    margin: 0;
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    color: var(--pale-blue);
+    min-height: 100vh;
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
